@@ -1,6 +1,9 @@
 '''
 Reader for litter json files
 '''
+import json
+
+from rabbit_genetics.rabbit_utils import rabbit
 
 def read_litter(path):
     '''
@@ -34,6 +37,11 @@ def read_litter(path):
     args:
       path (str): Path to json file containing litter data
     returns:
-      list of Rabbit objects
+      dict of Rabbit objects, ID mapping to rabbit
     '''
-    return True
+    with open(path, 'r') as myfile:
+        litter_data = json.loads(myfile.read())
+    litter = {}
+    for bunny in litter_data:
+        litter[bunny['ID']] = rabbit.Rabbit(bunny['ID'], bunny['genotype'])
+    return litter

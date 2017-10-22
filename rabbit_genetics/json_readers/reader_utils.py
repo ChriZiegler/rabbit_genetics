@@ -1,0 +1,2 @@
+class LitterReadError(Exception):
+    pass

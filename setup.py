@@ -11,5 +11,6 @@ setup(name='rabbit_genetics',
       author_email='chriziegler@gmail.com',
       license='MIT',
       packages=find_packages(),
+      package_data={'rabbit_genetics.unittests':['unittests/fixtures/test_litter.json']},
       zip_safe=False
      )
