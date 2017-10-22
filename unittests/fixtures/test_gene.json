@@ -1,0 +1,31 @@
+var colors = [
+  {
+    "name" : "STARTING_COLOR",
+    "RGBA" : [0.82, 0.82, 0.82, 0.40]
+  },
+  {
+    "name" : "YELLOW",
+    "RGBA" : [0.89, 0.78, 0.53, 0.40]
+  },
+  {
+    "name" : "BLACK",
+    "RGBA" : [0.15, 0.10, 0.07, 0.40]
+  },
+  {
+    "name" : "WHITE",
+    "RGBA" : [0.92, 0.92, 0.92, 0.40]
+  }
+]
+
+var genes = [
+  {
+  "name" : "B",
+  "description" : "Determines the color of melanin",
+  "action" : {
+              "0" : ["MELANIN = ADD BLACK TO COLOR4 WITH INTENSITY 1",
+                     "MELANIN = ADD YELLOW TO MELANIN WITH INTENSITY 0"],
+              "1" : ["MELANIN = ADD BLACK TO COLOR4 WITH INTENSITY .93",
+                     "MELANIN = ADD YELLOW TO MELANIN WITH INTENSITY .05"]
+              }
+  }
+]
